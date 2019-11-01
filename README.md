@@ -1,2 +1,2 @@
 # ejsProject
-Ejs project
+Cloning Product hunt website using ejs.
