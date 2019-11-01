@@ -1,0 +1,26 @@
+<%- include partials/header.ejs%>
+
+<div>
+    <h1>Home Page</h1>
+
+    <form Method="POST"action="/form">
+        <input type="text" name="userName"><br>
+        <input type="submit" value="Submit">
+    </form>
+
+
+    <h2>List of users:</h2>
+    <% for(var i=0; i< users.length; i++){%>
+
+    <div>
+        <li><%=users[i]%>
+        <form method="POST" action="/delete/<%=users[i]%>"><button>delete</button></form>
+        <form method="POST" action="/update/<%=users[i]%>">
+            <input type="text" name="updateUser" placeholder="Update User">
+            <button>update</button></form>
+        </li>
+    </div>
+    <%}%>
+</div>
+
+<%- include partials/footer.ejs%>
